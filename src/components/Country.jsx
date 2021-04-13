@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const CountryArticle = styled.article`
+const CountryArticle = styled(Link)`
     width: 260px;
     height: 330px;
     border-radius: 5px;
@@ -31,7 +32,7 @@ const CountryArticle = styled.article`
 
 const Country = ({ flag, name, population, region, capital }) => {
     return (
-        <CountryArticle>
+        <CountryArticle to={`/country/${name}`}>
             <div>
                 <img src={flag} alt={name} />
             </div>

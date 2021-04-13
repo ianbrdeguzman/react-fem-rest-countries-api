@@ -1,11 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
-import Font from '../fonts/NunitoSans-Light.ttf';
+import Font from '../font/NunitoSans-Light.ttf';
 
 export const darkTheme = {
     fontColor: 'hsl(0, 0%, 100%)',
     input: 'hsl(0, 0%, 52%)',
     background: 'hsl(207, 26%, 17%)',
     elements: 'hsl(209, 23%, 22%)',
+    loader: 'hsl(0, 0%, 100%)',
+    loaderTop: 'hsl(0, 0%, 17%)',
 };
 
 export const lightTheme = {
@@ -13,6 +15,8 @@ export const lightTheme = {
     input: 'hsl(0, 0%, 52%)',
     background: 'hsl(0, 0%, 98%)',
     elements: 'hsl(0, 0%, 100%)',
+    loader: 'hsl(0, 0%, 0%)',
+    loaderTop: 'hsl(0, 0%, 100%)',
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -50,27 +54,18 @@ export const GlobalStyles = createGlobalStyle`
         color: ${(props) => props.theme.fontColor};
         background-color: ${(props) => props.theme.elements};
     }
-    ::-webkit-input-placeholder {
-        color: ${(props) => props.theme.fontColor};
-        font-family: inherit;
-        font-size: 12px;
-    }
-    :-ms-input-placeholder {
-        color: ${(props) => props.theme.fontColor};
-        font-family: inherit;
-        font-size: 12px;
-    }
+    ::-webkit-input-placeholder,
+    :-ms-input-placeholder,
     ::placeholder {
         color: ${(props) => props.theme.fontColor};
         font-family: inherit;
         font-size: 12px;
     }
-    select {
+    select,
+    article,
+    a {
         background-color: ${(props) => props.theme.elements};
         color: ${(props) => props.theme.fontColor};
-    }
-    article {
-        background-color: ${(props) => props.theme.elements};
-        color: ${(props) => props.theme.fontColor};
+        text-decoration: none;
     }
 `;

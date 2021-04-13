@@ -17,8 +17,8 @@ const Loader = styled.div`
     margin-top: 0;
     margin-left: -25px;
     border-radius: 50%;
-    border: 2px solid hsl(0, 0%, 100%);
-    border-top-color: hsl(0, 0%, 17%);
+    border: 2px solid ${(props) => props.theme.loader};
+    border-top-color: ${(props) => props.theme.loaderTop};
     animation: ${rotate} 0.6s linear infinite;
 `;
 

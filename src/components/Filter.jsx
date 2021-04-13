@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { device } from '../styles/device';
+import { AppContext } from './context';
 
 const SelectContainer = styled.select`
     font-family: inherit;
@@ -9,14 +11,21 @@ const SelectContainer = styled.select`
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+    @media ${device.laptop} {
+        margin: 0;
+    }
 `;
 
 const Filter = () => {
+    const { handleFilter } = useContext(AppContext);
+
     return (
         <SelectContainer
             name='region'
             id='region'
             aria-label='filter by region'
+            onChange={(e) => handleFilter(e.target.value)}
         >
             <option value='' hidden>
                 Filter by Region
@@ -26,7 +35,7 @@ const Filter = () => {
             <option value='Americas'>Americas</option>
             <option value='Asia'>Asia</option>
             <option value='Europe'>Europe</option>
-            <option value='Oceana'>Oceana</option>
+            <option value='Oceania'>Oceania</option>
         </SelectContainer>
     );
 };

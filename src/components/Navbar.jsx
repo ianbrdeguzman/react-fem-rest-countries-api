@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { device } from '../styles/device';
+import { Link } from 'react-router-dom';
+import { AppContext } from './context';
 
 const StyledNav = styled.nav`
     width: 90%;
@@ -17,14 +20,38 @@ const StyledNav = styled.nav`
             margin-left: 0.4rem;
         }
     }
+    @media ${device.tablet} {
+        width: 75%;
+        margin: 0 auto;
+    }
+    @media ${device.laptop} {
+        width: 88%;
+        margin: 0 auto;
+    }
+    @media ${device.laptopL} {
+        width: 85%;
+        margin: 0 auto;
+    }
+    @media ${device.desktop} {
+        width: 82%;
+        margin: 0 auto;
+    }
+    @media ${device.desktopL} {
+        width: 86%;
+        margin: 0 auto;
+    }
 `;
 
-const Navbar = ({ toggleTheme, theme }) => {
+const Navbar = () => {
+    const { theme, handleTheme } = useContext(AppContext);
+
     return (
         <nav>
             <StyledNav>
-                <h1>Where in the world?</h1>
-                <button onClick={toggleTheme}>
+                <Link to='/'>
+                    <h1>Where in the world?</h1>
+                </Link>
+                <button onClick={() => handleTheme(theme)}>
                     {theme === 'dark' ? (
                         <>
                             <FaSun /> <span>Light Mode</span>

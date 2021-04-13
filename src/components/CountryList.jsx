@@ -21,7 +21,7 @@ const CountryList = () => {
         <main>
             <ContryContainer>
                 {countries.map((country) => {
-                    return <Country {...country} key={country.alpha3Code} />;
+                    return <Country {...country} key={country.name} />;
                 })}
             </ContryContainer>
         </main>
