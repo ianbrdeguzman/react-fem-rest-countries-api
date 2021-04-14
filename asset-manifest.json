@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/react-fem-rest-countries-api/static/js/main.b58b40ac.chunk.js",
+    "main.js.map": "/react-fem-rest-countries-api/static/js/main.b58b40ac.chunk.js.map",
+    "runtime-main.js": "/react-fem-rest-countries-api/static/js/runtime-main.7258b1c7.js",
+    "runtime-main.js.map": "/react-fem-rest-countries-api/static/js/runtime-main.7258b1c7.js.map",
+    "static/js/2.da3ed6a0.chunk.js": "/react-fem-rest-countries-api/static/js/2.da3ed6a0.chunk.js",
+    "static/js/2.da3ed6a0.chunk.js.map": "/react-fem-rest-countries-api/static/js/2.da3ed6a0.chunk.js.map",
+    "index.html": "/react-fem-rest-countries-api/index.html",
+    "static/js/2.da3ed6a0.chunk.js.LICENSE.txt": "/react-fem-rest-countries-api/static/js/2.da3ed6a0.chunk.js.LICENSE.txt",
+    "static/media/NunitoSans-Light.7f9eed4c.ttf": "/react-fem-rest-countries-api/static/media/NunitoSans-Light.7f9eed4c.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7258b1c7.js",
+    "static/js/2.da3ed6a0.chunk.js",
+    "static/js/main.b58b40ac.chunk.js"
+  ]
+}
