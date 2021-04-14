@@ -32,7 +32,7 @@ const CountryArticle = styled(Link)`
 
 const Country = ({ flag, name, population, region, capital }) => {
     return (
-        <CountryArticle to={`/country/${name}`}>
+        <CountryArticle to={`/react-fem-rest-countries-api/country/${name}`}>
             <div>
                 <img src={flag} alt={name} />
             </div>

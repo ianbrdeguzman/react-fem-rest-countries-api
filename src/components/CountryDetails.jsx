@@ -151,7 +151,7 @@ const CountryDetails = () => {
     return (
         <Container>
             <article>
-                <Link to='/'>
+                <Link to='/react-fem-rest-countries-api/'>
                     <FaLongArrowAltLeft />
                     <span>Back</span>
                 </Link>

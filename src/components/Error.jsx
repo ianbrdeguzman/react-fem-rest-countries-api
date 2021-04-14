@@ -28,7 +28,7 @@ const Error = () => {
                 Oops!
                 <br /> Nothing here...
             </h1>
-            <Link to='/'>
+            <Link to='/react-fem-rest-countries-api/'>
                 <button>
                     <FaLongArrowAltLeft />
                     <span>Back</span>

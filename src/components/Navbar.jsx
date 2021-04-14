@@ -48,7 +48,7 @@ const Navbar = () => {
     return (
         <nav>
             <StyledNav>
-                <Link to='/'>
+                <Link to='/react-fem-rest-countries-api/'>
                     <h1>Where in the world?</h1>
                 </Link>
                 <button onClick={() => handleTheme(theme)}>

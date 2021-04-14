@@ -18,14 +18,17 @@ function App() {
             <Router>
                 <Navbar />
                 <Switch>
-                    <Route exact path='/'>
+                    <Route exact path='/react-fem-rest-countries-api/'>
                         <Form />
                         <CountryList />
                     </Route>
-                    <Route exact path='/country/:country'>
+                    <Route
+                        exact
+                        path='/react-fem-rest-countries-api/country/:country'
+                    >
                         <CountryDetails />
                     </Route>
-                    <Route exact path='/*'>
+                    <Route exact path='/react-fem-rest-countries-api/*'>
                         <Error />
                     </Route>
                 </Switch>
