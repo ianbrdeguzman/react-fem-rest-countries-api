@@ -172,10 +172,7 @@ const CountryDetails = () => {
                             <p>Capital: {capital}</p>
                         </div>
                         <div>
-                            <p>
-                                {topLevelDomain &&
-                                    `Top Level Domain: ${topLevelDomain}`}
-                            </p>
+                            <p>Top Level Domain: {topLevelDomain}</p>
                             <p>
                                 {currencies &&
                                     `Currencies: ${currencies[0].name}`}
