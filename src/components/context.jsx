@@ -8,6 +8,7 @@ const defaultState = {
     theme: 'dark',
     countries: [],
     countryDetails: {},
+    borders: [],
     newBorders: [],
     isLoading: true,
     input: '',
@@ -60,23 +61,16 @@ const AppProvider = ({ children }) => {
         fetchCountries(searchURL);
     };
 
-    const createBorders = (borders) => {
-        // const bordersName = state.countries.filter(country=> {
-        //     return borders.f
-        // })
-
-        state.countries.map((country) => {
-            console.log(country.name);
-            console.log(borders);
+    const createBorders = () => {
+        const bordersName = [];
+        state.countries.forEach((country) => {
+            state.borders.forEach((border) => {
+                if (country.alpha3Code === border) {
+                    bordersName.push(country.name);
+                }
+            });
         });
-        // [...state.countries].map((country) => {
-        //     return [...state.countryDetails.borders].forEach((border) => {
-        //         if (country.alpha3Code === border) {
-        //             bordersName.push(country.name);
-        //         }
-        //     });
-        // });
-        // dispatch({ type: 'CREATE_BORDERS', payload: bordersName });
+        dispatch({ type: 'CREATE_BORDERS', payload: bordersName });
     };
 
     const fetchCountries = async (url) => {
@@ -103,6 +97,10 @@ const AppProvider = ({ children }) => {
                 console.log('error');
                 throw new Error(response.status);
             }
+            dispatch({
+                type: 'FETCH_BORDERS',
+                payload: response.data[0].borders,
+            });
             dispatch({ type: 'FETCH_DETAILS', payload: response.data[0] });
         } catch (error) {
             console.log('error');

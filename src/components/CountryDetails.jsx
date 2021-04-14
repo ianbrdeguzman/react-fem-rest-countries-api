@@ -55,6 +55,7 @@ const ImageWrapper = styled.div`
     }
     @media ${device.laptop} {
         width: 55%;
+        height: 400px;
     }
     @media ${device.laptopL} {
         width: 50%;
@@ -118,6 +119,7 @@ const CountryDetails = () => {
         countryDetails,
         isLoading,
         newBorders,
+        borders,
         createBorders,
     } = useContext(AppContext);
 
@@ -132,15 +134,14 @@ const CountryDetails = () => {
         topLevelDomain,
         currencies,
         languages,
-        borders,
     } = countryDetails;
 
     useEffect(() => {
         fetchDetails(searchURL);
-    }, [name]);
+    }, []);
 
     useEffect(() => {
-        createBorders(borders);
+        createBorders();
     }, [borders]);
 
     if (isLoading) {

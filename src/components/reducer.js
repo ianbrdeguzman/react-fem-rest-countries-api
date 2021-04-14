@@ -8,6 +8,8 @@ const reducer = (state, action) => {
                 countryDetails: action.payload,
                 isLoading: false,
             };
+        case 'FETCH_BORDERS':
+            return { ...state, borders: action.payload };
         case 'CREATE_BORDERS':
             return { ...state, newBorders: action.payload };
         case 'TOGGLE_THEME':
